@@ -1,26 +1,19 @@
 <?php
 
 
-class DB extends PDO
+class DB
 {
-    private $db_host = 'localhost';
-    private $db_name = '';
-    private $db_user = 'root';
-    private $db_password = '';
-    private $db = false;
+    private static $instance = null;
 
-
-
-    public function __construct() {
-        parent::__construct("mysql:dbname=".$this->db_name.";host=".$this->db_host, $this->db_user, $this->db_password);
+    private function __construct() {
     }
 
-    public function setErrorException() {
-        $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-
-    public function connect() {
-        $this->setErrorException();
-        return $this;
+    public static function getInstance() {
+        if (self::$instance == null) {
+            self::$instance = new DB();
+            self::$instance = new PDO("mysql:dbname=trail_sharing_project;host=localhost", 'root', '');
+            self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        }
+        return self::$instance;
     }
 }
