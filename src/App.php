@@ -18,8 +18,25 @@ class App
                 case 'contact_form':
                     echo $this->load('', 'src/templates', 'contact/contact__form.twig');
                     break;
+                case 'home':
+                    echo $this->load('', 'src/templates', 'home.twig');
+                    break;
+                case 'articles_view':
+                    echo $this->load('', 'src/templates', 'articles/articles_view.twig');
+                    break;
+                case 'forum_view':
+                    echo $this->load('', 'src/templates', 'forum/forum_view.twig');
+                    break;
+                case 'albums_view':
+                    echo $this->load('', 'src/templates', 'albums/albums_view.twig');
+                    break;
+                case 'trails_view':
+                    echo $this->load('', 'src/templates', 'trails/trails_view.twig');
+                    break;
+                case 'news_view':
+                    echo $this->load('', 'src/templates', 'news/news_view.twig');
+                    break;
             }
-
         } else {
             echo $this->load('', 'src/templates', 'home.twig');
         }
