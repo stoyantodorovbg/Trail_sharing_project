@@ -4,16 +4,28 @@ class App
 {
     public function main()
     {
-       echo $this->load('', 'src/templates', 'home.twig');
 
-        $db_test = DB::getInstance();
 
-        $query = $db_test->prepare("
-       INSERT INTO `forum`
-       (`title`)
-       VALUES (?)
-       ");
-        $query->execute(['test_value']);
+        if (isset($_GET['action'])) {
+            $action = $_GET['action'];
+            switch ($action) {
+                case 'register_form':
+                    echo $this->load('', 'src/templates', 'register/register_form.twig');
+                    break;
+                case 'login_form':
+                    echo $this->load('', 'src/templates', 'login/login_form.twig');
+                    break;
+                case 'contact_form':
+                    echo $this->load('', 'src/templates', 'contact/contact__form.twig');
+                    break;
+            }
+
+        } else {
+            echo $this->load('', 'src/templates', 'home.twig');
+        }
+
+
+
 
     }
 
