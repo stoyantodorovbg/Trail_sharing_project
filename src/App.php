@@ -33,9 +33,16 @@ class App
                 case 'trails_view':
                     echo $this->load('', 'src/templates', 'trails/trails_view.twig');
                     break;
+                case 'team_view':
+                    echo $this->load('', 'src/templates', 'team/team_view.twig');
+                    break;
+                case 'about_view':
+                    echo $this->load('', 'src/templates', 'about/about_view.twig');
+                    break;
                 case 'news_view':
                     echo $this->load('', 'src/templates', 'news/news_view.twig');
                     break;
+
             }
         } else {
             echo $this->load('', 'src/templates', 'home.twig');
