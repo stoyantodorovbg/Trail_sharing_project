@@ -36,7 +36,7 @@ class UserRegister
             $this->createNotification($checkPassword[1]);
         } else {
             $hashed_password = $this->hashPassword($password);
-            $this->user = new User($username, $hashed_password, $email, 1);
+            $this->user = new UserRegisterModel($username, $hashed_password, $email, 1);
             if ($first_name != '') {
                 $this->user->setFirstName($first_name);
             }
@@ -46,7 +46,12 @@ class UserRegister
             if ($age != '') {
                 $this->user->setAge($age);
             }
-            $this->user->registerUser();
+            $try_register = $this->user->registerUser();
+            if ($try_register[0] === true) {
+                $this->startSession($try_register[1], $try_register[2], 1);
+            } else {
+                $notification = new Notification('Unsuccessful register. Try to input correct data!');
+            }
         }
     }
 
@@ -111,6 +116,13 @@ class UserRegister
         } else {
             return [true];
         }
+    }
+
+    private function startSession($username, $user_id, $role_id)
+    {
+        $session = new Session();
+        $session->sessionStart($username, $user_id,  $role_id);
+        $notification = new Notification('Success register!');
     }
 
     private function createNotification($content) {

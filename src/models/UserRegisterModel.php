@@ -1,7 +1,7 @@
 <?php
 
 
-class User
+class UserRegisterModel
 {
     private $username;
     private $password;
@@ -12,7 +12,7 @@ class User
     private $age = '';
 
     /**
-     * User constructor.
+     * UserRegisterModel constructor.
      * @param $username
      * @param $password
      * @param $role
@@ -29,46 +29,31 @@ class User
     public function registerUser()
     {
         $db = DB::getInstance();
+        $register_success = false;
+
+        try {
         $reg_user = $db->prepare("
         INSERT INTO `users`
         (`username`, `password`, `role_id`, `email`, `first_name`, `last_name`, `age`)
         VALUES (?, ?, ?, ?, ?, ?, ?)
         ");
         $reg_user->execute([$this->username, $this->password, $this->role_id, $this->email, $this->first_name, $this->last_name, $this->age]);
+        $register_success = true;
+        } catch (PDOException $e) {
+            echo 'erorrrrrrrrrrrrrrr'.$e;
+        }
 
-        if ($this->checkRegistrationSuccess()) {
-            $this->startSession();
+        if ($register_success === true) {
+            $get_id = $db->prepare("
+            SELECT LAST_INSERT_ID()
+            FROM `users`
+            ");
+            $get_id->execute();
+            $get_id_arr = $get_id->fetchAll(PDO::FETCH_ASSOC);
+            return [true, $this->username, $get_id_arr[0]['LAST_INSERT_ID()']];
         } else {
-            $notification = new Notification('Unsuccessful register. Something went wrong! Try to input correct data!');
+            return [false];
         }
-    }
-
-    private function checkRegistrationSuccess()
-    {
-        $username = $this->username;
-        $db = DB::getInstance();
-        $check_reg = $db->prepare("
-        SELECT `username`
-        FROM `users`
-        WHERE `username` = \"$username\";
-        ");
-        $check_reg->execute();
-        $reg = false;
-        foreach ($check_reg as $i => $iv) {
-            $reg = $iv['username'];
-        }
-        if ($reg) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private function startSession()
-    {
-        $session = new Session($this->username, $this->role_id);
-        $session->sessionStart();
-        $notification = new Notification('Success register!');
     }
 
     /**

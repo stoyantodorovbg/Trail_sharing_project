@@ -11,7 +11,6 @@ class App
             switch ($action) {
                 case 'register_form':
                     echo $twig->load('', 'src/templates', 'register/register_form.twig');
-
                     break;
                 case 'login_form':
                     echo $twig->load('', 'src/templates', 'login/login_form.twig');
@@ -58,6 +57,10 @@ class App
                 switch ($form_type) {
                     case 'register':
                         $user = new UserRegister();
+                        $user->getData();
+                        break;
+                    case 'login':
+                        $user = new UserLogin();
                         $user->getData();
                         break;
                 }

@@ -28,16 +28,17 @@
 
         </div>
         <hr class="w3-opacity" >
-        <form action="/action_page.php" target="_blank">
+        <form method="post">
             <div class="w3-section">
                 <label>Username</label><br/>
-                <input type="text" name="username" minlength="5" maxlength="25" placeholder="of 5 to 25 characters" required>
+                <input type="text" name="username" required>
             </div>
             <div class="w3-section">
                 <label>Password</label><br/>
-                <input type="password" name="password" minlength="5" maxlength="25" placeholder="of 5 to 25 characters" required>
+                <input type="password" name="password" required>
             </div>
-            <button type="submit" class="w3-button w3-orange w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Submit</button>
+            <input type="hidden" name="form_type" value="login">
+            <button type="submit" name="submit" value="submit" class="w3-button w3-orange w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Submit</button>
         </form>
         <br/><br/><br/>
     </div>

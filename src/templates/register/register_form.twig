@@ -19,13 +19,6 @@
 
 {{ include('./common/menu.twig') }}
 
-{% if _session.role_id is defined %}
-<div class="w3-container w3-padding-large w3-red w3-center">
-    <h1>herhfe</h1>
-{{ _session.username }}
-</div>
-{% endif %}
-
 <div class="w3-container w3-animate-right" style="margin-left:140px">
 <div class="w3-container w3-padding-large w3-grey">
     <br/><br/><br/>
@@ -63,7 +56,6 @@
         <div class="w3-section">
             <label>Age</label><br/>
             <input type="text" name="age" maxlength="3" placeholder="optional">
-            <input type="hidden" value="user_register">
         </div>
         <input type="hidden" name="form_type" value="register">
         <input type="submit" name="submit" value="submit" class="w3-button w3-orange w3-margin-bottom">

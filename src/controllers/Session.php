@@ -4,25 +4,12 @@
 class Session
 {
     private $status;
-    private $username;
-    private $role_id;
 
-    /**
-     * Session constructor.
-     * @param $username
-     * @param $role_id
-     */
-    public function __construct($username, $role_id)
+    public function sessionStart($username, $user_id, $role_id)
     {
-        $this->username = $username;
-        $this->role_id = $role_id;
-    }
-
-
-    public function sessionStart()
-    {
-        $_SESSION['username'] = $this->username;
-        $_SESSION['role_id'] = $this->role_id;
+        $_SESSION['username'] = $username;
+        $_SESSION['user_id'] = $user_id;
+        $_SESSION['role_id'] = $role_id;
         $this->status = true;
     }
 
