@@ -17,8 +17,14 @@
 <!-- Header -->
 {{ include('./common/header.twig') }}
 
-<!-- Sidebar/menu -->
 {{ include('./common/menu.twig') }}
+
+{% if _session.role_id is defined %}
+<div class="w3-container w3-padding-large w3-red w3-center">
+    <h1>herhfe</h1>
+{{ _session.username }}
+</div>
+{% endif %}
 
 <div class="w3-container w3-animate-right" style="margin-left:140px">
 <div class="w3-container w3-padding-large w3-grey">
@@ -28,23 +34,23 @@
 
     </div>
     <hr class="w3-opacity" >
-    <form action="/action_page.php" target="_blank">
+    <form method="post">
         <div class="w3-section">
             <label>Username</label><br/>
-            <input type="text" name="username" minlength="5" maxlength="25" placeholder="of 5 to 25 characters" required>
+            <input type="text" name="username" placeholder="of 5 to 25 characters" >
         </div>
         <div class="w3-section">
             <label>Email</label><br/>
-            <input type="email" name="email" placeholder="valid email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+            <input type="email" name="email" placeholder="valid email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" >
         </div>
         <div class="w3-section">
             <label>Password</label><br/>
-            <input type="password" name="password" minlength="5" maxlength="25" placeholder="of 5 to 25 characters" required>
+            <input type="password" name="password" minlength="7" maxlength="25" placeholder="of 7 to 25 characters" >
         </div>
 
         <div class="w3-section">
             <label>Repeat password</label><br/>
-            <input type="password" name="password" minlength="7" maxlength="25" placeholder="of 5 to 25 characters" required>
+            <input type="password" name="repeat_password" minlength="7" maxlength="25" placeholder="of 7 to 25 characters" >
         </div>
         <div class="w3-section">
             <label>First name</label><br/>
@@ -57,9 +63,12 @@
         <div class="w3-section">
             <label>Age</label><br/>
             <input type="text" name="age" maxlength="3" placeholder="optional">
+            <input type="hidden" value="user_register">
         </div>
-        <button type="submit" class="w3-button w3-orange w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Submit</button>
+        <input type="hidden" name="form_type" value="register">
+        <input type="submit" name="submit" value="submit" class="w3-button w3-orange w3-margin-bottom">
     </form>
+
 </div>
 </div>
 

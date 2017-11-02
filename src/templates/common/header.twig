@@ -4,12 +4,19 @@
         <a href="#home" class="w3-bar-item w3-button w3-wide">Welcome</a>
         <!-- Right-sided navbar links -->
         <div class="w3-center w3-hide-small">
+            {% if _session.role_id == 0 %}
             <a href="?action=register_form" class="w3-bar-item w3-button w3-padding"><i class="fa fa-map-pin w3-margin-right"></i>REGISTER</a>
             <a href="?action=login_form" class="w3-bar-item w3-button w3-padding"><i class="fa fa-map-pin w3-margin-right"></i>LOGIN</a>
+
             <a href="?action=team_view" class="w3-bar-item w3-button"><i class="fa fa-user" ></i> TEAM</a>
             <a href="?action=about_view" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
             <a href="?action=contact_form" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
             <a href="?action=home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>HOME</a>
+            {% endif %}
+            {% if _session.role_id == 1 %}
+            <a href="?action=exit" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Exit</a>
+            {% endif %}
+
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 

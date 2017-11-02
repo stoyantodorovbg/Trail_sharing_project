@@ -4,60 +4,67 @@ class App
 {
     public function main()
     {
-
+        $twig = new TwigConf();
 
         if (isset($_GET['action'])) {
             $action = $_GET['action'];
             switch ($action) {
                 case 'register_form':
-                    echo $this->load('', 'src/templates', 'register/register_form.twig');
+                    echo $twig->load('', 'src/templates', 'register/register_form.twig');
+
                     break;
                 case 'login_form':
-                    echo $this->load('', 'src/templates', 'login/login_form.twig');
+                    echo $twig->load('', 'src/templates', 'login/login_form.twig');
                     break;
                 case 'contact_form':
-                    echo $this->load('', 'src/templates', 'contact/contact__form.twig');
+                    echo $twig->load('', 'src/templates', 'contact/contact__form.twig');
                     break;
                 case 'home':
-                    echo $this->load('', 'src/templates', 'home.twig');
+                    echo $twig->load('', 'src/templates', 'home.twig');
                     break;
                 case 'articles_view':
-                    echo $this->load('', 'src/templates', 'articles/articles_view.twig');
+                    echo $twig->load('', 'src/templates', 'articles/articles_view.twig');
                     break;
                 case 'forum_view':
-                    echo $this->load('', 'src/templates', 'forum/forum_view.twig');
+                    echo $twig->load('', 'src/templates', 'forum/forum_view.twig');
                     break;
                 case 'albums_view':
-                    echo $this->load('', 'src/templates', 'albums/albums_view.twig');
+                    echo $twig->load('', 'src/templates', 'albums/albums_view.twig');
                     break;
                 case 'trails_view':
-                    echo $this->load('', 'src/templates', 'trails/trails_view.twig');
+                    echo $twig->load('', 'src/templates', 'trails/trails_view.twig');
                     break;
                 case 'team_view':
-                    echo $this->load('', 'src/templates', 'team/team_view.twig');
+                    echo $twig->load('', 'src/templates', 'team/team_view.twig');
                     break;
                 case 'about_view':
-                    echo $this->load('', 'src/templates', 'about/about_view.twig');
+                    echo $twig->load('', 'src/templates', 'about/about_view.twig');
                     break;
                 case 'news_view':
-                    echo $this->load('', 'src/templates', 'news/news_view.twig');
+                    echo $twig->load('', 'src/templates', 'news/news_view.twig');
                     break;
-
+                case 'exit':
+                    $session = Session::getInstance();
+                    $session->sessionStop();
+                    break;
             }
         } else {
-            echo $this->load('', 'src/templates', 'home.twig');
+            echo $twig->load('', 'src/templates', 'home.twig');
         }
 
-
-
-
+        if (isset($_POST['submit'])) {
+            if (isset($_POST['form_type'])) {
+                $form_type = $_POST['form_type'];
+                switch ($form_type) {
+                    case 'register':
+                        $user = new UserRegister();
+                        $user->getData();
+                        break;
+                }
+            } else {
+                return new Notification('Error!', '../../index.php');
+            }
+        }
     }
 
-    private function load($cachePath, $templatePath, $fileName, $array = [])
-    {
-        $loader = new Twig_Loader_Filesystem($templatePath);
-        $twig = new Twig_Environment($loader);
-
-        return $twig->render($fileName, $array);
-    }
 }
