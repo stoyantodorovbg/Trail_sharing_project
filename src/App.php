@@ -43,8 +43,7 @@ class App
                     echo $twig->load('', 'src/templates', 'news/news_view.twig');
                     break;
                 case 'exit':
-                    $session = Session::getInstance();
-                    $session->sessionStop();
+                    $logout = new UserLogout();
                     break;
             }
         } else {

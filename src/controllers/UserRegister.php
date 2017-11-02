@@ -122,6 +122,7 @@ class UserRegister
     {
         $session = new Session();
         $session->sessionStart($username, $user_id,  $role_id);
+
         $notification = new Notification('Success register!');
     }
 

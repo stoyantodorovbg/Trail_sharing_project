@@ -21,7 +21,7 @@ class UserLogin
         $login = new UserLoginModel($username, $password);
         $try_login = $login->login();
         if ($try_login[0] === true) {
-            $this->startSession($try_login[0], $try_login[1], $try_login[2]);
+            $this->startSession($try_login[1], $try_login[2], $try_login[3]);
         } else {
             $notification = new Notification('Unsuccessful login. Try to input correct data!');
         }
