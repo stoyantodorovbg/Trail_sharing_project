@@ -1,12 +1,12 @@
 <?php
 
 
-class UserLogin
+class UserLoginController
 {
 
     public function getData()
     {
-        $filter_data = new FilterData();
+        $filter_data = new FilterDataController();
         $filter_data->saveFromTagsPost();
 
         $username = $_POST['username'];
@@ -23,15 +23,15 @@ class UserLogin
         if ($try_login[0] === true) {
             $this->startSession($try_login[1], $try_login[2], $try_login[3]);
         } else {
-            $notification = new Notification('Unsuccessful login. Try to input correct data!');
+            $notification = new NotificationController('Unsuccessful login. Try to input correct data!');
         }
     }
 
     private function startSession($username, $user_id, $role_id)
     {
-        $session = new Session();
+        $session = new SessionController();
         $session->sessionStart($username, $user_id,  $role_id);
-        $notification = new Notification('Success login!');
+        $notification = new NotificationController('Success login!');
     }
 
     private function hashPassword($password)

@@ -1,7 +1,7 @@
 <nav class="menu">
     <div class="vertical-menu">
 
-        {% if _session.role_id == 1 %}
+        {% if _session.role_id == 1 or _session.role_id == 2%}
 
             <a href="">Welcome, {{ _session.username }}!</a>
                 <br/>
@@ -13,13 +13,19 @@
             <br/>
         {% endif %}
 
+        {% if _session.role_id == 2 %}
+            <a href="?action=create_news" class=""><i class=""></i>Sent contacts</a>
+            <br/>
+            <a href="?action=create_news" class=""><i class=""></i>Create news</a>
+            <br/>
+        {% endif %}
 
-        {% if _session.role_id == 1 %}
-            <a href="?action=create_trail" class=""><i class=""></i>Create</a>
+        {% if _session.role_id == 1 or _session.role_id == 2 %}
+            <a href="?action=create_trail" class=""><i class=""></i>Create trail</a>
             <br/>
-            <a href="?action=create_album" class=""><i class=""></i>Create</a>
+            <a href="?action=create_album" class=""><i class=""></i>Create album</a>
             <br/>
-            <a href="?action=create_article" class=""><i class=""></i>Create</a>
+            <a href="?action=create_article" class=""><i class=""></i>Create article</a>
             <br/>
         {% endif %}
 

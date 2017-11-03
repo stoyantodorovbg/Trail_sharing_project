@@ -17,7 +17,7 @@
             <a href="?action=contact_form" class=""><i class=""></i><span> CONTACT </span></a>
             <a href="?action=home" class=""><i class=""></i><span> HOME </span></a>
 
-            {% if _session.role_id == 1 %}
+            {% if _session.role_id == 1  or _session.role_id == 2%}
                 <a href="?action=exit" class=""><i class=""></i><span> Exit </span></a>
             {% endif %}
             <br/>

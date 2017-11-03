@@ -1,13 +1,13 @@
 <?php
 
 
-class UserRegister
+class UserRegisterController
 {
     private $user;
 
     public function getData()
     {
-        $filter_data = new FilterData();
+        $filter_data = new FilterDataController();
         $filter_data->saveFromTagsPost();
 
         $username = $_POST['username'];
@@ -50,7 +50,7 @@ class UserRegister
             if ($try_register[0] === true) {
                 $this->startSession($try_register[1], $try_register[2], 1);
             } else {
-                $notification = new Notification('Unsuccessful register. Try to input correct data!');
+                $notification = new NotificationController('Unsuccessful register. Try to input correct data!');
             }
         }
     }
@@ -120,13 +120,13 @@ class UserRegister
 
     private function startSession($username, $user_id, $role_id)
     {
-        $session = new Session();
+        $session = new SessionController();
         $session->sessionStart($username, $user_id,  $role_id);
 
-        $notification = new Notification('Success register!');
+        $notification = new NotificationController('Success register!');
     }
 
     private function createNotification($content) {
-        return new Notification($content);
+        return new NotificationController($content);
     }
 }

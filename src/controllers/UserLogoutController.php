@@ -1,11 +1,11 @@
 <?php
 
 
-class UserLogout
+class UserLogoutController
 {
 
     /**
-     * UserLogout constructor.
+     * UserLogoutController constructor.
      */
     public function __construct()
     {
@@ -14,7 +14,7 @@ class UserLogout
 
     private function logout()
     {
-        $session = new Session();
+        $session = new SessionController();
         $session->sessionStop();
         $this->goHome();
     }

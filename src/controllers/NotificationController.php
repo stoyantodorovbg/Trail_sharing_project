@@ -1,12 +1,12 @@
 <?php
 
 
-class Notification
+class NotificationController
 {
     private $content;
 
     /**
-     * Notification constructor.
+     * NotificationController constructor.
      * @param $content
      */
     public function __construct($content)
@@ -17,7 +17,7 @@ class Notification
 
     private function showNotification()
     {
-        $twig = new TwigConf();
-        echo $twig->load('', 'src/templates/notification', 'notification.twig', ['notification' => $this->content]);
+        $twig = new TwigConfController();
+        echo $twig->load('', 'src/templates/notification', 'notification.twig', ['NotificationController' => $this->content]);
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-class Session
+class SessionController
 {
     public function sessionStart($username, $user_id, $role_id)
     {

@@ -1,7 +1,7 @@
 <?php
 
 
-class TwigConf
+class TwigConfController
 {
     public function load($cachePath, $templatePath, $fileName, $array = [])
     {

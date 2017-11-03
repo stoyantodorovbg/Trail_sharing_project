@@ -4,7 +4,7 @@ class App
 {
     public function main()
     {
-        $twig = new TwigConf();
+        $twig = new TwigConfController();
 
         if (isset($_GET['action'])) {
             $action = $_GET['action'];
@@ -43,7 +43,7 @@ class App
                     echo $twig->load('', 'src/templates', 'news/news_view.twig');
                     break;
                 case 'exit':
-                    $logout = new UserLogout();
+                    $logout = new UserLogoutController();
                     break;
             }
         } else {
@@ -55,16 +55,18 @@ class App
                 $form_type = $_POST['form_type'];
                 switch ($form_type) {
                     case 'register':
-                        $user = new UserRegister();
+                        $user = new UserRegisterController();
                         $user->getData();
                         break;
                     case 'login':
-                        $user = new UserLogin();
+                        $user = new UserLoginController();
+                        $user->getData();
+                        break;
+                    case 'contact':
+                        $user = new ContactController();
                         $user->getData();
                         break;
                 }
-            } else {
-                return new Notification('Error!', '../../index.php');
             }
         }
     }

@@ -1,7 +1,7 @@
 <?php
 
 
-class FilterData
+class FilterDataController
 {
     public function saveFromTagsPost() {
         foreach ($_POST as $i) {
