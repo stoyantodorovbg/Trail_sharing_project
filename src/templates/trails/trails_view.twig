@@ -1,89 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Trails</title>
-    <title>W3.CSS Template</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-    </style>
-
-</head>
 <!-- Header -->
 {{ include('./common/header.twig') }}
 
 <!-- Sidebar/menu -->
 {{ include('./common/menu.twig') }}
 
-<div class="w3-container w3-animate-right w3-grey" style="margin-left:140px">
+<div class="trails">
+    <br/>
+    <h1><b>Trails</b></h1>
     <br/><br/><br/>
-    <div class="w3-center">
-        <h1 id="contact"><b>Trails</b></h1>
-    </div>
-
     <!-- First Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-        <div class="w3-quarter">
-            <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+    <div class="trails_rubric" id="food">
+        <div class="trails_subject">
+            <img src="/w3images/sandwich.jpg" alt="Sandwich">
             <h3>The Perfect Sandwich, A Real NYC Classic</h3>
             <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
-        <div class="w3-quarter">
-            <img src="/w3images/steak.jpg" alt="Steak" style="width:100%">
+        <div class="trails_subject">
+            <img src="/w3images/steak.jpg" alt="Steak">
             <h3>Let Me Tell You About This Steak</h3>
             <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
-        <div class="w3-quarter">
-            <img src="/w3images/cherries.jpg" alt="Cherries" style="width:100%">
+        <div class="trails_subject">
+            <img src="/w3images/cherries.jpg" alt="Cherries">
             <h3>Cherries, interrupted</h3>
             <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             <p>What else?</p>
         </div>
-        <div class="w3-quarter">
-            <img src="/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
+        <div class="trails_subject">
+            <img src="/w3images/wine.jpg" alt="Pasta and Wine">
             <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
             <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
     </div>
 
     <!-- Second Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center">
-        <div class="w3-quarter">
-            <img src="/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
+    <div class="trails_rubric">
+        <div class="trails_subject">
+            <img src="/w3images/popsicle.jpg" alt="Popsicle" >
             <h3>All I Need Is a Popsicle</h3>
             <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
-        <div class="w3-quarter">
-            <img src="/w3images/salmon.jpg" alt="Salmon" style="width:100%">
+        <div class="trails_subject">
+            <img src="/w3images/salmon.jpg" alt="Salmon">
             <h3>Salmon For Your Skin</h3>
             <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
-        <div class="w3-quarter">
-            <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+        <div class="trails_subject">
+            <img src="/w3images/sandwich.jpg" alt="Sandwich">
             <h3>The Perfect Sandwich, A Real Classic</h3>
             <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
-        <div class="w3-quarter">
-            <img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
+        <div class="trails_subject">
+            <img src="/w3images/croissant.jpg" alt="Croissant">
             <h3>Le French</h3>
             <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
         </div>
     </div>
 
     <!-- Pagination -->
-    <div class="w3-center">
+    <div class="pagination">
         <div class="w3-bar">
-            <a href="#" class="w3-bar-item w3-button w3-hover-white">«</a>
-            <a href="#" class="w3-bar-item w3-green w3-button">1</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-white">2</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-white">3</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-white">4</a>
-            <a href="#" class="w3-bar-item w3-button w3-hover-white">»</a>
+            <a href="#" class="">«</a>
+            <a href="#" class="">1</a>
+            <a href="#" class="">2</a>
+            <a href="#" class="">3</a>
+            <a href="#" class="">4</a>
+            <a href="#" class="">»</a>
         </div>
     </div>
 </div>

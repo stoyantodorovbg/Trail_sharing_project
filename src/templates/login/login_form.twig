@@ -1,33 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <title>W3.CSS Template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-    </style>
-
-</head>
 <!-- Header -->
 {{ include('./common/header.twig') }}
 
 <!-- Sidebar/menu -->
 {{ include('./common/menu.twig') }}
 
-<div class="w3-container w3-animate-right" style="margin-left:140px">
-    <div class="w3-container w3-padding-large w3-grey">
-        <br/><br/><br/>
-        <h1 id="contact"><b>Login</b></h1>
-        <div class="w3-bar-block w3-padding w3-center" style="margin:0 -16px">
-
-        </div>
-        <hr class="w3-opacity" >
+<div>
+    <div class="form_create">
+        <br/>
+        <h1><b>Login</b></h1>
+        <br/><br/>
         <form method="post">
             <div class="w3-section">
                 <label>Username</label><br/>
@@ -38,7 +19,7 @@
                 <input type="password" name="password" required>
             </div>
             <input type="hidden" name="form_type" value="login">
-            <button type="submit" name="submit" value="submit" class="w3-button w3-orange w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Submit</button>
+            <input type="submit" name="submit" value="submit">
         </form>
         <br/><br/><br/>
     </div>

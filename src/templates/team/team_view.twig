@@ -1,45 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Team</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-    </style>
-
-</head>
-<body>
 <!-- Header -->
 {{ include('./common/header.twig') }}
 
 <!-- Sidebar/menu -->
 {{ include('./common/menu.twig') }}
 
-<div class="w3-container w3-animate-right w3-grey" style="margin-left:140px">
-
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-    <img src="https://www.w3schools.com/w3images/sailboat.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
-</div>
+<div class="team">
 
 <!-- Team Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
+    <div class="team_title">
     <h2>OUR TEAM</h2>
-    <p>Meet the team:</p>
+    <p>MEET OUR TEAM:</p>
 
-    <div class="w3-row w3-center"><br>
+    <div><br>
 
-        <div class="w3-quarter">
+        <div class="team_member">
             <img src="https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-1/c0.51.240.240/p240x240/10277163_829753020387503_603563332333000948_n.jpg?oh=48b35118e9e668a13f968f9806ab4417&oe=5A621144" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
             <h3>Stoyan Todorov</h3>
             <p>Developer</p>
         </div>
 
-        <div class="w3-quarter">
+        <div class="team_member">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBg7ln6Xe6DWHvVMKXIIJS8p0g6UxSEMxTyeTuI0y5vewEYKSVNg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
             <h3>Softuni</h3>
             <p>Assisting team</p>
@@ -49,66 +29,35 @@
 </div>
 
 <!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+<div class="team_work">
 
-    <div class="w3-quarter">
+    <div class="projects">
         <h2>Our Work</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Vernazza">
+        <p>m veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
-    <div class="w3-quarter">
-        <div class="w3-card w3-white">
-            <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Vernazza" style="width:100%">
-            <div class="w3-container">
-                <h3>Customer 1</h3>
-                <h4>Trade</h4>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-            </div>
-        </div>
+    <div class="projects">
+        <h2>Our Work</h2>
+        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Vernazza">
+        <p> am, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
-    <div class="w3-quarter">
-        <div class="w3-card w3-white">
-            <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Cinque Terre" style="width:100%">
-            <div class="w3-container">
-                <h3>Customer 2</h3>
-                <h4>Trade</h4>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-            </div>
-        </div>
+    <div class="projects">
+        <h2>Our Work</h2>
+        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Vernazza">
+        <p> niam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
-    <div class="w3-quarter">
-        <div class="w3-card w3-white">
-            <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="Monterosso" style="width:100%">
-            <div class="w3-container">
-                <h3>Customer 3</h3>
-                <h4>Trade</h4>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-                <p>Blablabla</p>
-            </div>
-        </div>
+    <div class="projects">
+        <h2>Our Work</h2>
+        <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Vernazza">
+        <p>Lorem ipsum dolor sit amettempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve</p>
     </div>
-
 </div>
 </div>
 
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-    <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-       style="position:absolute;top:-28px;right:24px">+</a>
-</div>
 
 
 <!-- Footer -->
 {{ include('common/footer.twig') }}
-</body>
-</html>

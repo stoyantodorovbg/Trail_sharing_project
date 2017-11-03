@@ -1,32 +1,45 @@
-<nav class="w3-sidebar w3-collapse w3-teal w3-animate-left" style="z-index:3;width:160px;" id="mySidebar"><br>
-    <div class="w3-container">
-        <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-            <i class="fa fa-remove"></i>
-        </a>
-        <img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br>
-        <div class="w3-text-orange ">
-        <h4><b>Menu</b></h4>
-        </div>
-    </div>
-    <div class="w3-bar-block w3-padding">
+<nav class="menu">
+    <div class="vertical-menu">
 
-        <a href="?action=news_view" class="w3-bar-item w3-button w3-orange w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>News</a>
+        {% if _session.role_id == 1 %}
+
+            <a href="">Welcome, {{ _session.username }}!</a>
+                <br/>
+
+        {% endif %}
+        {% if _session.role_id == 0 %}
+
+            <a href="">Welcome, Guest!</a>
+            <br/>
+        {% endif %}
+
+
+        {% if _session.role_id == 1 %}
+            <a href="?action=create_trail" class=""><i class=""></i>Create</a>
+            <br/>
+            <a href="?action=create_album" class=""><i class=""></i>Create</a>
+            <br/>
+            <a href="?action=create_article" class=""><i class=""></i>Create</a>
+            <br/>
+        {% endif %}
+
+        <a href="?action=news_view" class=""><i class=""></i>News</a>
         <br/>
-        <a href="?action=articles_view" class="w3-bar-item w3-button w3-orange w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Articles</a>
+        <a href="?action=articles_view" class=""><i class=""></i>Articles</a>
         <br/>
-        <a href="?action=trails_view" class="w3-bar-item w3-button w3-orange w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Trails</a>
+        <a href="?action=trails_view" class=""><i class=""></i>Trails</a>
         <br/>
-        <a href="?action=forum_view" class="w3-bar-item w3-button w3-orange w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Forum</a>
+        <a href="?action=forum_view" class=""><i class=""></i>Forum</a>
         <br/>
-        <a href="?action=albums_view" class="w3-bar-item w3-button w3-orange w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Albums</a>
+        <a href="?action=albums_view" class=""><i class="fa fa-th-large fa-fw w3-margin-right"></i>Albums</a>
 
     </div>
-    <div class="w3-panel w3-large">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <div class="">
+        <i class=""></i>
+        <i class=""></i>
+        <i class=""></i>
+        <i class=""></i>
+        <i class=""></i>
+        <i class=""></i>
     </div>
 </nav>

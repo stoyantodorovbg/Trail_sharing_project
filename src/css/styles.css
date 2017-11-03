@@ -1,0 +1,681 @@
+h1 {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:xx-large;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+    color:green;
+}
+
+h2 {
+    font-family: sans-serif;
+    color:red;
+}
+
+p {
+    font-family: Georgia;
+    color: green;
+}
+
+div.pagination {
+    float: right;
+    width: 30%;
+    border-radius: 5px;
+    font-family: sans-serif;
+    background-color: orange;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+div.search {
+    float: left;
+    width: 99%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+table {
+    width: 99%;
+}
+
+table, th, td {
+    font-family: sans-serif;
+    border: 1px solid black;
+}
+
+th {
+    background:orange;
+}
+
+td {
+    text-align: center;
+    background:palegreen;
+}
+
+
+header {
+
+    font: bold 11px/3.5em Verdana;
+    margin-bottom: 20px;
+
+}
+
+
+
+hr {
+    border:none;
+    border-top:1px solid #CCCCCC;
+    height:1px;
+    margin-bottom:25px;
+}
+
+
+/*HORIZONTAL MENU*/
+
+
+#tabs {
+
+    float:left;
+    width:99.8%;
+    font-size:93%;
+    line-height:normal;
+    border-bottom:2px solid green;
+    background-color: lightgoldenrodyellow;
+    padding: 1px;
+    margin-bottom: 1%;
+    border-radius: 3px;
+    font-family: sans-serif;
+}
+
+#tabs ul {
+    float:left;
+    width:99%;
+    margin:0;
+    padding:10px 10px 0 50px;
+    list-style:none;
+}
+
+#tabs li {
+    float:left;
+    width:99%;
+    display:inline;
+    margin:0;
+    padding:0;
+    color: orange;
+}
+
+#tabs a {
+    float:left;
+    margin:0;
+    padding:0 0 0 4px;
+    text-decoration:none;
+    border-radius: 5px;
+    color: orange;
+}
+
+#tabs a span {
+    float:left;
+    display:block;
+    font-size: 15px;
+    padding:2px 30px 4px 6px;
+    color:#84776B;
+    border-radius: 5px;
+}
+
+#tabs a:hover {
+    background-color: yellow; /* Violet background on mouse-over */}
+
+#tabs a.active {
+    background-color: green; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+/*BODY*/
+
+body {
+    background-color: aliceblue;
+}
+
+
+
+/*FOOTER*/
+
+
+
+footer {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    font-family: sans-serif;
+    background-color: deepskyblue;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color:blueviolet;
+    font-family:sans-serif;
+    float:left;
+}
+
+footer p a{
+    color:green;
+}
+
+div.footer {
+    float: left;
+    margin-right: 20px;
+}
+
+
+/*VERTICAL MENU*/
+
+
+.vertical-menu {
+    background-color: bisque; /* bisque background color */
+    border-radius: 5px;
+}
+
+.vertical-menu a {
+    background-color: orange; /* Orange background color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px;
+    font-family: sans-serif;
+    color:blueviolet;
+}
+
+.vertical-menu a:hover {
+    background-color: palevioletred; /* Violet background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: green; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+div.greeting {
+    background-color: orange; /* Orange background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+
+nav.menu {
+    float: left;
+    width: 15%; /* Set a width if you like */
+    border-radius: 5px;
+    background-color: bisque; /* bisque background color */
+    font-family: sans-serif;
+    font-size:93%;
+    line-height:normal;
+}
+
+/*MAIN*/
+
+div.main {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    background-color:palegoldenrod;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+div.main img {
+    float: left;
+    width: 99%;
+    border-radius: 5px;
+}
+
+
+
+div.text_image h1{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    width: 60%;
+    color: green;
+    font-size: x-large;
+}
+
+div.text_image h2.first{
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    width: 40%;
+    color: blue;
+    font-size: x-large;
+}
+
+div.text_image h2.second{
+    position: absolute;
+    top: 90%;
+    left: 60%;
+    width: 40%;
+    color: blue;
+    font-size: x-large;
+}
+
+
+/*ABOUT*/
+
+div.about {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    background-color:palegoldenrod;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+
+/*TEAM*/
+
+
+div.team {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    background-color:palegoldenrod;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+div.team div.team_member {
+    float: left;
+    width: 23%;
+    border-radius: 5px;
+    background-color: peru;
+    margin: 2%;
+    padding: 2%;
+}
+
+div.team div.team_member img {
+    border-radius: 5px;
+}
+
+div.team_title {
+    padding: 2%;
+}
+
+div.team_work {
+    float: left;
+    width: 90%;
+    border-radius: 5px;
+    background-color: lightgreen;
+    margin: 4%;
+    padding: 2%;
+}
+
+div.team_work div.projects {
+    float: left;
+    width: 22%;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 0.5%;
+    background-color: aliceblue;
+}
+
+div.team_work img {
+    float: left;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/*NEWS*/
+
+div.news {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    background-color:palegoldenrod;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+div.news_rubric {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lawngreen;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.news_subject {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lightgoldenrodyellow;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.news_subject h3 {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: red;
+}
+
+div.news_subject p {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: green;
+}
+
+
+
+/*ARTICLES*/
+
+
+
+div.articles {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    background-color:palegoldenrod;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+div.articles_rubric {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lawngreen;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.articles_subject {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lightgoldenrodyellow;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.articles_subject h3 {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: red;
+}
+
+div.articles_subject p {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: green;
+}
+
+
+/*TRAILS*/
+
+
+
+div.trails {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    background-color:palegoldenrod;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+div.trails_rubric {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lawngreen;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.trails_subject {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lightgoldenrodyellow;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.trails_subject h3 {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: red;
+}
+
+div.trails_subject p {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: green;
+}
+
+
+
+/*FORUM*/
+
+
+
+div.forum {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    background-color:palegoldenrod;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+div.forum_rubric {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lawngreen;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.forum_subject {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lightgoldenrodyellow;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.forum_subject h3 {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: red;
+}
+
+div.forum_subject p {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: green;
+}
+
+
+
+/*ALBUMS*/
+
+
+
+div.albums {
+    float: right;
+    width: 83%;
+    border-radius: 5px;
+    background-color:palegoldenrod;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+div.albums_rubric {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lawngreen;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.albums_subject {
+    float: left;
+    width: 46%;
+    border-radius: 5px;
+    background-color:lightgoldenrodyellow;
+    padding: 1%;
+    margin: 1%;
+    margin-bottom: 20px;
+}
+
+div.albums_subject h3 {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: red;
+}
+
+div.albums_subject p {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: green;
+}
+
+
+/*FORMS*/
+
+input[type=password], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+div.form_create input[type=text], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+div.form_create  input[type=number], select {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input.main[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 15%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input.main[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+label {
+    font-family: sans-serif;
+    color: red;
+}
+
+div.form_create {
+    float: right;
+    width: 83%;
+    background-color: gainsboro;
+    padding: 5px;
+    margin-bottom: 1%;
+    border-radius: 5px;
+}
+
+div.form_create h1 {
+    color: green;
+    font-size: xx-large;
+}
+

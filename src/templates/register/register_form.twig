@@ -1,64 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-    <title>W3.CSS Template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-    </style>
 
-</head>
 <!-- Header -->
 {{ include('./common/header.twig') }}
 
 {{ include('./common/menu.twig') }}
 
-<div class="w3-container w3-animate-right" style="margin-left:140px">
-<div class="w3-container w3-padding-large w3-grey">
-    <br/><br/><br/>
-    <h1 id="contact"><b>Register</b></h1>
-    <div class="w3-bar-block w3-padding w3-center" style="margin:0 -16px">
+<div>
+<div class="form_create">
+    <br/>
+    <h1><b>Register</b></h1>
+    <br/><br/>
 
-    </div>
-    <hr class="w3-opacity" >
     <form method="post">
-        <div class="w3-section">
+        <div class="">
             <label>Username</label><br/>
             <input type="text" name="username" placeholder="of 5 to 25 characters" >
         </div>
-        <div class="w3-section">
+        <div class="">
             <label>Email</label><br/>
             <input type="email" name="email" placeholder="valid email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" >
         </div>
-        <div class="w3-section">
+        <div class="">
             <label>Password</label><br/>
             <input type="password" name="password" minlength="7" maxlength="25" placeholder="of 7 to 25 characters" >
         </div>
 
-        <div class="w3-section">
+        <div class="">
             <label>Repeat password</label><br/>
             <input type="password" name="repeat_password" minlength="7" maxlength="25" placeholder="of 7 to 25 characters" >
         </div>
-        <div class="w3-section">
+        <div class="">
             <label>First name</label><br/>
             <input type="text" name="first_name" maxlength="25" placeholder="optional">
         </div>
-        <div class="w3-section">
+        <div class="">
             <label>Last name</label><br/>
             <input type="text" name="last_name" maxlength="25" placeholder="optional">
         </div>
-        <div class="w3-section">
+        <div class="">
             <label>Age</label><br/>
             <input type="text" name="age" maxlength="3" placeholder="optional">
         </div>
         <input type="hidden" name="form_type" value="register">
-        <input type="submit" name="submit" value="submit" class="w3-button w3-orange w3-margin-bottom">
+        <input type="submit" name="submit" value="submit">
     </form>
 
 </div>
@@ -66,4 +49,3 @@
 
 <!-- Footer -->
 {{ include('common/footer.twig') }}
-</html>

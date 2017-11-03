@@ -1,27 +1,28 @@
-<!-- Navbar (sit on top) -->
-<div class="w3-top" style="margin-left:160px">
-    <div class="w3-bar w3-orange w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button w3-wide">Welcome</a>
-        <!-- Right-sided navbar links -->
-        <div class="w3-center w3-hide-small">
-            {% if _session.role_id == 0 or _session.role_id == 1%}
-            <a href="?action=register_form" class="w3-bar-item w3-button w3-padding"><i class="fa fa-map-pin w3-margin-right"></i>REGISTER</a>
-            <a href="?action=login_form" class="w3-bar-item w3-button w3-padding"><i class="fa fa-map-pin w3-margin-right"></i>LOGIN</a>
-
-            <a href="?action=team_view" class="w3-bar-item w3-button"><i class="fa fa-user" ></i> TEAM</a>
-            <a href="?action=about_view" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
-            <a href="?action=contact_form" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-            <a href="?action=home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>HOME</a>
+<html>
+<head>
+    <title>header</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>
+    <div id="tabs">
+        <ul>
+            {% if _session.role_id == 0%}
+                <a href="?action=register_form" class=""><i class=""></i><span> REGISTER </span></a>
+                <a href="?action=login_form" class=""><i class=""></i> <span> LOGIN </span></a>
             {% endif %}
+
+            <a href="?action=team_view" class=""><i class=""></i><span>TEAM</span></a>
+            <a href="?action=about_view" class=""><i class=""></i><span> ABOUT </span></a>
+            <a href="?action=contact_form" class=""><i class=""></i><span> CONTACT </span></a>
+            <a href="?action=home" class=""><i class=""></i><span> HOME </span></a>
+
             {% if _session.role_id == 1 %}
-            <a href="?action=exit" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Exit</a>
+                <a href="?action=exit" class=""><i class=""></i><span> Exit </span></a>
             {% endif %}
-
-        </div>
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-            <i class="fa fa-bars"></i>
-        </a>
+            <br/>
+        </ul>
     </div>
-</div>
+</header>
+
+
