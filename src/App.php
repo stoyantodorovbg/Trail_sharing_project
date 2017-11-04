@@ -51,6 +51,12 @@ class App
                 case 'trail_create':
                     echo $twig->load('', 'src/templates', 'trails/trail_create.twig');
                     break;
+                case 'album_create':
+                    echo $twig->load('', 'src/templates', 'albums/album_create.twig');
+                    break;
+                case 'article_create':
+                    echo $twig->load('', 'src/templates', 'articles/article_create.twig');
+                    break;
 
 
 
@@ -82,6 +88,14 @@ class App
                     case 'trail_create':
                         $trail = new TrailController();
                         $trail->getData();
+                        break;
+                    case 'album_create':
+                        $album = new AlbumController();
+                        $album->getData();
+                        break;
+                    case 'article_create':
+                        $article = new ArticleController();
+                        $article->getData();
                         break;
 
 

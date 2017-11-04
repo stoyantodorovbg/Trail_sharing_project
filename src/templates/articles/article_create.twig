@@ -1,0 +1,46 @@
+<!-- Header -->
+{{ include('./common/header.twig') }}
+
+<!-- Sidebar/menu -->
+{{ include('./common/menu.twig') }}
+
+<div>
+    <div class="form_create">
+        <br/>
+        <h1><b>Create article</b></h1>
+        <br/><br/>
+
+        <form method="post">
+            <div>
+                <label>Title</label><br/>
+                <input type="text" name="title" placeholder="required">
+                <br/><br/>
+            </div>
+            <div>
+                <label>Subject</label><br/>
+                <input type="text" name="subject" placeholder="required">
+                <br/><br/>
+            </div>
+            <div>
+                <label>Short content</label><br/>
+                <textarea name="short_content" cols="70" rows="3" placeholder="required"></textarea>
+                <br/><br/>
+            </div>
+            <div>
+                <label>Content</label><br/>
+                <textarea name="content" cols="70" rows="10" placeholder="required"></textarea>
+                <br/><br/>
+            </div>
+            <div>
+                <label>Images</label><br/>
+                <input type="file" name="upload_image">
+                <br/><br/>
+            </div>
+            <input type="hidden" name="form_type" value="article_create">
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+{{ include('common/footer.twig') }}
