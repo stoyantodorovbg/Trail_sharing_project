@@ -15,6 +15,9 @@ class App
                 case 'login_form':
                     echo $twig->load('', 'src/templates', 'login/login_form.twig');
                     break;
+                case 'exit':
+                    $logout = new UserLogoutController();
+                    break;
                 case 'contact_form':
                     echo $twig->load('', 'src/templates', 'contact/contact__form.twig');
                     break;
@@ -42,9 +45,15 @@ class App
                 case 'news_view':
                     echo $twig->load('', 'src/templates', 'news/news_view.twig');
                     break;
-                case 'exit':
-                    $logout = new UserLogoutController();
+                case 'news_create':
+                    echo $twig->load('', 'src/templates', 'news/news_create.twig');
                     break;
+                case 'trail_create':
+                    echo $twig->load('', 'src/templates', 'trails/trail_create.twig');
+                    break;
+
+
+
             }
         } else {
             echo $twig->load('', 'src/templates', 'home.twig');
@@ -63,9 +72,19 @@ class App
                         $user->getData();
                         break;
                     case 'contact':
-                        $user = new ContactController();
-                        $user->getData();
+                        $contact = new ContactController();
+                        $contact->getData();
                         break;
+                    case 'news_create':
+                        $news = new NewsController();
+                        $news->getData();
+                        break;
+                    case 'trail_create':
+                        $trail = new TrailController();
+                        $trail->getData();
+                        break;
+
+
                 }
             }
         }

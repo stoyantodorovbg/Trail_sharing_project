@@ -6,8 +6,7 @@ class ContactController
 
     public function getData()
     {
-        $filter_data = new FilterDataController();
-        $filter_data->saveFromTagsPost();
+       $this->filterData();
 
         $content = $_POST['comment'];
         $first_name = $_POST['first_name'];
@@ -35,4 +34,11 @@ class ContactController
         $contact->writeContact($content, $first_name, $last_name, $email);
         $notification = new NotificationController('Thank you for this feedback! It is useful for us.');
     }
+
+    private function filterData()
+    {
+        $filter_data = new FilterDataController();
+        $filter_data->saveFromTagsPost();
+    }
+
 }

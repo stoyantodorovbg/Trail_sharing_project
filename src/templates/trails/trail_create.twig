@@ -1,0 +1,64 @@
+<!-- Header -->
+{{ include('./common/header.twig') }}
+
+<!-- Sidebar/menu -->
+{{ include('./common/menu.twig') }}
+
+<div>
+    <div class="form_create">
+        <br/>
+        <h1><b>Create trail</b></h1>
+        <br/><br/>
+
+        <form method="post">
+            <div>
+                <label>Trail name</label><br/>
+                <input type="text" name="trail_name" placeholder="required">
+                <br/><br/>
+            </div>
+            <div>
+                <label>Country</label><br/>
+                <input type="text" name="country" placeholder="required">
+                <br/><br/>
+            </div>
+            <div>
+                <label>Region</label><br/>
+                <input type="text" name="region" placeholder="required">
+                <br/><br/>
+            </div>
+            <div>
+                <label>Approaches</label><br/>
+                <textarea name="approaches" cols="70" rows="5" placeholder="Describe the tha approaches from the trail: (required)"></textarea>
+                <br/><br/>
+            </div>
+            <div>
+                <label>Difficulty</label><br/>
+                <select name="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="difficult">Difficult</option>
+                    <option value="very difficult">Very difficult</option>
+                    <option value="advanced">Advanced</option>
+                    <option value="extreme">Extreme</option>
+                    <option value="craziness">Craziness</option>
+                </select>
+                <br/><br/>
+            </div>
+            <div>
+                <label>Description</label><br/>
+                <textarea name="description" cols="70" rows="10" placeholder="Describe the route: (required)"></textarea>
+                <br/><br/>
+            </div>
+            <div>
+                <label>Images</label><br/>
+                <input type="file" name="upload_image">
+                <br/><br/>
+            </div>
+            <input type="hidden" name="form_type" value="trail_create">
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+{{ include('common/footer.twig') }}

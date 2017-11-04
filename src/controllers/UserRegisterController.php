@@ -7,8 +7,7 @@ class UserRegisterController
 
     public function getData()
     {
-        $filter_data = new FilterDataController();
-        $filter_data->saveFromTagsPost();
+        $this->filterData();
 
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -129,4 +128,11 @@ class UserRegisterController
     private function createNotification($content) {
         return new NotificationController($content);
     }
+
+    private function filterData()
+    {
+        $filter_data = new FilterDataController();
+        $filter_data->saveFromTagsPost();
+    }
+
 }

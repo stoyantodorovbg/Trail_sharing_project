@@ -14,18 +14,18 @@
         {% endif %}
 
         {% if _session.role_id == 2 %}
-            <a href="?action=create_news" class=""><i class=""></i>Sent contacts</a>
+            <a href="?action=sent_contacts" class=""><i class=""></i>Sent contacts</a>
             <br/>
-            <a href="?action=create_news" class=""><i class=""></i>Create news</a>
+            <a href="?action=news_create" class=""><i class=""></i>Create news</a>
             <br/>
         {% endif %}
 
         {% if _session.role_id == 1 or _session.role_id == 2 %}
-            <a href="?action=create_trail" class=""><i class=""></i>Create trail</a>
+            <a href="?action=trail_create" class=""><i class=""></i>Create trail</a>
             <br/>
-            <a href="?action=create_album" class=""><i class=""></i>Create album</a>
+            <a href="?action=album_create" class=""><i class=""></i>Create album</a>
             <br/>
-            <a href="?action=create_article" class=""><i class=""></i>Create article</a>
+            <a href="?action=article_create" class=""><i class=""></i>Create article</a>
             <br/>
         {% endif %}
 
